@@ -36,5 +36,10 @@ namespace Proyecto_matemática_discreta_II
             button6.Enabled = true;
             button7.Enabled = true;
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
