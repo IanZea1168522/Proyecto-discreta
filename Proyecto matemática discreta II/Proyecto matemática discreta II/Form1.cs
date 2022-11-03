@@ -10,9 +10,17 @@ using System.Windows.Forms;
 
 namespace Proyecto_matemática_discreta_II
 {
+    
+
     public partial class Form1 : Form
     {
+
         //variables globales
+        string usuario1, usuario2;
+        string nombre1, nombre2;
+        string apellido1, apellido2;
+        int edad1, edad2;
+
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +43,11 @@ namespace Proyecto_matemática_discreta_II
             button5.Enabled = true;
             button6.Enabled = true;
             button7.Enabled = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
