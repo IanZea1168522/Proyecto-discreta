@@ -170,6 +170,185 @@ namespace Proyecto_matemática_discreta_II
             currentColor = 0;
         }
 
+        private void pictureBoxVV1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxVV6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            currentColor = 1;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            currentColor = 2;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            currentColor = 3;
+        }
+
+        private void pbV2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbV1_Click(object sender, EventArgs e)
+        {
+            if (currentColor == 1)
+            {
+                pbV1R.Visible = true;
+                VD7 = 1;
+            }
+            else if (currentColor == 2)
+            {
+                pbV1A.Visible = true;
+                VD7 = 2;
+            }
+            else if (currentColor == 3)
+            {
+                pbV1V.Visible = true;
+                VD7 = 3;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un color");
+            }
+            currentColor = 0;
+        }
+
+        private void pbV2_Click_1(object sender, EventArgs e)
+        {
+            if (currentColor == 1)
+            {
+                pbV2R.Visible = true;
+                VD4 = 1;
+            }
+            else if (currentColor == 2)
+            {
+                pbV2A.Visible = true;
+                VD4 = 2;
+            }
+            else if (currentColor == 3)
+            {
+                pbV2V.Visible = true;
+                VD4 = 3;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un color");
+            }
+            currentColor = 0;
+        }
+
+        private void pbV4_Click(object sender, EventArgs e)
+        {
+            if (currentColor == 1)
+            {
+                pbV4R.Visible = true;
+                VD3 = 1;
+            }
+            else if (currentColor == 2)
+            {
+                pbV4A.Visible = true;
+                VD3 = 2;
+            }
+            else if (currentColor == 3)
+            {
+                pbV4V.Visible = true;
+                VD3 = 3;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un color");
+            }
+            currentColor = 0;
+        }
+
+        private void pbV3_Click(object sender, EventArgs e)
+        {
+            if (currentColor == 1)
+            {
+                pbV3R.Visible = true;
+                VD5 = 1;
+            }
+            else if (currentColor == 2)
+            {
+                pbV3A.Visible = true;
+                VD5 = 2;
+            }
+            else if (currentColor == 3)
+            {
+                pbV3V.Visible = true;
+                VD5 = 3;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un color");
+            }
+            currentColor = 0;
+        }
+
+        private void pbV5_Click(object sender, EventArgs e)
+        {
+            if (currentColor == 1)
+            {
+                pbV5R.Visible = true;
+                VD6 = 1;
+            }
+            else if (currentColor == 2)
+            {
+                pbV5A.Visible = true;
+                VD6 = 2;
+            }
+            else if (currentColor == 3)
+            {
+                pbV5V.Visible = true;
+                VD6 = 3;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un color");
+            }
+            currentColor = 0;
+        }
+
+        private void pbV6_Click(object sender, EventArgs e)
+        {
+            if (currentColor == 1)
+            {
+                pbV6R.Visible = true;
+                VD8 = 1;
+            }
+            else if (currentColor == 2)
+            {
+                pbV6A.Visible = true;
+                VD8 = 2;
+            }
+            else if (currentColor == 3)
+            {
+                pbV6V.Visible = true;
+                VD8 = 3;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un color");
+            }
+            currentColor = 0;
+        }
+
         private void pictureBoxV4_Click(object sender, EventArgs e)
         {
             if (currentColor == 1)

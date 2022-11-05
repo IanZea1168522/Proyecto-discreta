@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen22.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
