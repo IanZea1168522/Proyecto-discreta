@@ -24,11 +24,12 @@ namespace Proyecto_matemática_discreta_II
         //para saber el valor del grafo
         int currentColor = 0;
         //para el grafo en difícil
-        int VD1, VD2, VD3, VD4, VD5, VD6, VD7, VD8, VD9, VD10;
-        int VF1, VF2, VF3, VF4, VF5, VF6;
+        int VD1, VD2, VD3, VD4, VD5, VD6, VD7, VD8, VD9, VD10 = 0;
+        int VF1, VF2, VF3, VF4, VF5, VF6 = 0;
 
         private void pictureBoxV5_Click(object sender, EventArgs e)
         {
+            //Se muestra el color dependiendo de lo elegido por el usuario
             if (currentColor == 1)
             {
                 pictureBoxVR5.Visible = true;
@@ -48,7 +49,318 @@ namespace Proyecto_matemática_discreta_II
             {
                 MessageBox.Show("Selecciona un color");
             }
+            //se reinicia el valor
             currentColor = 0;
+            //se comprueba se se perdió 2
+            if (VD5 != 0 && (VD5 == VD1 || VD5 == VD10 || VD5 == VD4))
+            {
+                //mensaje de derrota
+                MessageBox.Show("Perdiste .__________________.");
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //victoria
+            if (VD10 == 0 && VD10 != VD5 && VD10 != VD7 && VD8 != VD10 && VD5 != VD8 && VD5 != VD7 && VD7 != VD8)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //victoria
+            if (VD4 == 0 && VD4 != VD3 && VD4 != VD5 && VD4 != VD9 && VD3 != VD9 && VD3 != VD5 && VD5 != VD9)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se comprueba se se ganó 
+            if (VD1 == 0 && VD2 != VD5 && VD2 != VD6 && VD5 != VD6 && VD2 != VD1 && VD5 != VD1 && VD6 != VD1)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se comprueba se perdió
+            if (VD1 != 0 && VD2 != 0 && VD3 != 0 && VD4 != 0 && VD5 != 0 && VD6 != 0 && VD7 != 0 && VD8 != 0 && VD9 != 0 && VD10 != 0)
+            {
+                //mensaje de derrota
+                MessageBox.Show("Ha ganado " + usuario2);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
 
         private void pictureBoxV6_Click(object sender, EventArgs e)
@@ -73,6 +385,316 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            //se comprueba se se perdió 2
+            if (VD6 != 0 && (VD6 == VD1 || VD6 == VD8 || VD6 == VD9))
+            {
+                //mensaje de derrota
+                MessageBox.Show("Perdiste .__________________.");
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se gana
+            if (VD8 == 0 && VD8 != VD3 && VD8 != VD6 && VD8 != VD10 && VD6 != VD3 && VD6 != VD10 && VD3 != VD10)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //ganó
+            if (VD1 == 0 && VD2 != VD5 && VD2 != VD6 && VD5 != VD6 && VD2 != VD1 && VD5 != VD1 && VD6 != VD1)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1 );
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //victoria
+            if (VD9 == 0 && VD9 != VD6 && VD9 != VD7 && VD9 != VD4 && VD6 != VD7 && VD6 != VD4 && VD7 != VD4)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se comprueba se perdió
+            if (VD1 != 0 && VD2 != 0 && VD3 != 0 && VD4 != 0 && VD5 != 0 && VD6 != 0 && VD7 != 0 && VD8 != 0 && VD9 != 0 && VD10 != 0)
+            {
+                //mensaje de derrota
+                MessageBox.Show("Ha ganado " + usuario2);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
 
         private void pictureBoxV7_Click(object sender, EventArgs e)
@@ -97,6 +719,315 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            //se comprueba se se perdió 2
+            if (VD7 != 0 && (VD7 == VD2 || VD7 == VD10 || VD7 == VD9))
+            {
+                //mensaje de derrota
+                MessageBox.Show("Perdiste .__________________.");
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //victoria
+            if (VD9 == 0 && VD9 != VD6 && VD9 != VD7 && VD9 != VD4 && VD6 != VD7 && VD6 != VD4 && VD7 != VD4)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //gana
+            if (VD2 == 0 && VD2 != VD1 && VD2 != VD7 && VD2 != VD3 && VD1 != VD3 && VD1 != VD7 && VD3 != VD7)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se comprueba se perdió
+            if (VD1 != 0 && VD2 != 0 && VD3 != 0 && VD4 != 0 && VD5 != 0 && VD6 != 0 && VD7 != 0 && VD8 != 0 && VD9 != 0 && VD10 != 0)
+            {
+                //mensaje de derrota
+                MessageBox.Show("Ha ganado " + usuario2);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            if (VD10 == 0 && VD10 != VD5 && VD10 != VD7 && VD8 != VD10 && VD5 != VD8 && VD5 != VD7 && VD7 != VD8)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
 
         private void pictureBoxV8_Click(object sender, EventArgs e)
@@ -121,6 +1052,316 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            //se comprueba se se perdió 2
+            if (VD8 != 0 && (VD8 == VD3 || VD6 == VD8 || VD8 == VD10))
+            {
+                //mensaje de derrota
+                MessageBox.Show("Perdiste .__________________.");
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //ganó
+            if (VD10 == 0 && VD10 != VD5 && VD10 != VD7 && VD8 != VD10 && VD5 != VD8 && VD5 != VD7 && VD7 != VD8)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //ganó
+            if (VD6 == 0 && VD6 != VD1 && VD6 != VD8 && VD6 != VD9 && VD1 != VD8 && VD1 != VD9 && VD9 != VD8)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se gana
+            if (VD3 == 0 && VD3 != VD2 && VD3 != VD4 && VD3 != VD8 && VD2 != VD4 && VD2 != VD8 && VD4 != VD8)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se comprueba se perdió
+            if (VD1 != 0 && VD2 != 0 && VD3 != 0 && VD4 != 0 && VD5 != 0 && VD6 != 0 && VD7 != 0 && VD8 != 0 && VD9 != 0 && VD10 != 0)
+            {
+                //mensaje de derrota
+                MessageBox.Show("Ha ganado " + usuario2);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
 
         private void pictureBoxV9_Click(object sender, EventArgs e)
@@ -145,6 +1386,314 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (VD9 != 0 && (VD9 == VD4 || VD9 == VD6 || VD9 == VD7))
+            {
+                //mensaje de derrota
+                MessageBox.Show("Perdiste .__________________.");
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            if (VD7 == 0 && VD7 != VD2 && VD7 != VD9 && VD7 != VD10 && VD2 != VD9 && VD2 != VD10 && VD10 != VD9)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //ganó
+            if (VD6 == 0 && VD6 != VD1 && VD6 != VD8 && VD6 != VD9 && VD1 != VD8 && VD1 != VD9 && VD9 != VD8)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //victoria
+            if (VD4 == 0 && VD4 != VD3 && VD4 != VD5 && VD4 != VD9 && VD3 != VD9 && VD3 != VD5 && VD5 != VD9)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se comprueba se perdió
+            if (VD1 != 0 && VD2 != 0 && VD3 != 0 && VD4 != 0 && VD5 != 0 && VD6 != 0 && VD7 != 0 && VD8 != 0 && VD9 != 0 && VD10 != 0)
+            {
+                //mensaje de derrota
+                MessageBox.Show("Ha ganado " + usuario2);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
 
         private void pictureBoxV10_Click(object sender, EventArgs e)
@@ -169,6 +1718,313 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (VD10 != 0 && (VD10 == VD5 || VD10 == VD7 || VD10 == VD8))
+            {
+                //mensaje de derrota
+                MessageBox.Show("Perdiste .__________________.");
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se gana
+            if (VD8 == 0 && VD8 != VD3 && VD8 != VD6 && VD8 != VD10 && VD6 != VD3 && VD6 != VD10 && VD3 != VD10)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            if (VD7 == 0 && VD7 != VD2 && VD7 != VD9 && VD7 != VD10 && VD2 != VD9 && VD2 != VD10 && VD10 != VD9)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            if (VD5 == 0 && VD1 != VD5 && VD1 != VD10 && VD5 != VD10 && VD1 != VD4 && VD5 != VD4 && VD10 != VD4)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se comprueba se perdió
+            if (VD1 != 0 && VD2 != 0 && VD3 != 0 && VD4 != 0 && VD5 != 0 && VD6 != 0 && VD7 != 0 && VD8 != 0 && VD9 != 0 && VD10 != 0)
+            {
+                //mensaje de derrota
+                MessageBox.Show("Ha ganado " + usuario2);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
 
         private void pictureBoxVV1_Click(object sender, EventArgs e)
@@ -252,6 +2108,12 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+        }
+
+        private void pbV1V_Click(object sender, EventArgs e)
+        {
+
+
         }
 
         private void pbV4_Click(object sender, EventArgs e)
@@ -377,6 +2239,314 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (VD4 != 0 && (VD4 == VD5 || VD4 == VD3 || VD4 == VD9))
+            {
+                //mensaje de derrota
+                MessageBox.Show("Perdiste .__________________.");
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se gana
+            if (VD3 == 0 && VD3 != VD2 && VD3 != VD4 && VD3 != VD8 && VD2 != VD4 && VD2 != VD8 && VD4 != VD8)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se gana
+            if (VD5 == 0 && VD1 != VD5 && VD1 != VD10 && VD5 != VD10 && VD1 != VD4 && VD5 != VD4 && VD10 != VD4)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //victoria
+            if (VD9 == 0 && VD9 != VD6 && VD9 != VD7 && VD9 != VD4 && VD6 != VD7 && VD6 != VD4 && VD7 != VD4)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            if (VD1 != 0 && VD2 != 0 && VD3 != 0 && VD4 != 0 && VD5 != 0 && VD6 != 0 && VD7 != 0 && VD8 != 0 && VD9 != 0 && VD10 != 0)
+            {
+                //mensaje de derrota
+                MessageBox.Show("Ha ganado " + usuario2);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
 
         private void pictureBoxV3_Click(object sender, EventArgs e)
@@ -401,6 +2571,316 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            //se pierde
+            if (VD3 != 0 && (VD3 == VD2 || VD4 == VD3 || VD3 == VD8))
+            {
+                //mensaje de derrota
+                MessageBox.Show("Perdiste .__________________.");
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se gana
+            if (VD8 == 0 && VD8 != VD3 && VD8 != VD6 && VD8 != VD10 && VD6 != VD3 && VD6 != VD10 && VD3 != VD10)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //victoria
+            if (VD4 == 0 && VD4 != VD3 && VD4 != VD5 && VD4 != VD9 && VD3 != VD9 && VD3 != VD5 && VD5 != VD9)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //victoria
+            if (VD2 == 0 && VD2 != VD1 && VD2 != VD7 && VD2 != VD3 && VD1 != VD3 && VD1 != VD7 && VD3 != VD7)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se comprueba se perdió
+            if (VD1 != 0 && VD2 != 0 && VD3 != 0 && VD4 != 0 && VD5 != 0 && VD6 != 0 && VD7 != 0 && VD8 != 0 && VD9 != 0 && VD10 != 0)
+            {
+                //mensaje de derrota
+                MessageBox.Show("Ha ganado " + usuario2);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
 
         private void pictureBoxV2_Click(object sender, EventArgs e)
@@ -425,6 +2905,315 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            //se comprueba se se perdió 2
+            if (VD2 != 0 && (VD2 == VD1 || VD2 == VD3 || VD2 == VD7))
+            {
+                //mensaje de derrota
+                MessageBox.Show("Perdiste .__________________.");
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //ganó
+            if (VD1 == 0 && VD2 != VD5 && VD2 != VD6 && VD5 != VD6 && VD2 != VD1 && VD5 != VD1 && VD6 != VD1)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se gana
+            if (VD3 == 0 && VD3 != VD2 && VD3 != VD4 && VD3 != VD8 && VD2 != VD4 && VD2 != VD8 && VD4 != VD8)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            if (VD7 == 0 && VD7 != VD2 && VD7 != VD9 && VD7 != VD10 && VD2 != VD9 && VD2 != VD10 && VD10 != VD9)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se comprueba se perdió
+            if (VD1 != 0 && VD2 != 0 && VD3 != 0 && VD4 != 0 && VD5 != 0 && VD6 != 0 && VD7 != 0 && VD8 != 0 && VD9 != 0 && VD10 != 0)
+            {
+                //mensaje de derrota
+                MessageBox.Show("Ha ganado " + usuario2);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -464,6 +3253,315 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            //se comprueba se se perdió 2
+            if (VD1 != 0 && (VD5 == VD1 || VD1 == VD6 || VD1 == VD2))
+            {
+                //mensaje de derrota
+                MessageBox.Show("Perdiste .__________________.");
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //ganó
+            if (VD6 == 0 && VD6 != VD1 && VD6 != VD8 && VD6 != VD9 && VD1 != VD8 && VD1 != VD9 && VD9 != VD8)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            if (VD5 == 0 && VD1 != VD5 && VD1 != VD10 && VD5 != VD10 && VD1 != VD4 && VD5 != VD4 && VD10 != VD4)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //victoria
+            if (VD2 == 0 && VD2 != VD1 && VD2 != VD7 && VD2 != VD3 && VD1 != VD3 && VD1 != VD7 && VD3 != VD7)
+            {
+                //mensaje de victoria
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
+            //se comprueba se perdió
+            if (VD1 != 0 && VD2 != 0 && VD3 != 0 && VD4 != 0 && VD5 != 0 && VD6 != 0 && VD7 != 0 && VD8 != 0 && VD9 != 0 && VD10 != 0)
+            {
+                //mensaje de derrota
+                MessageBox.Show("Ha ganado " + usuario2);
+                //se reinician los valores
+                VD1 = 0;
+                VD2 = 0;
+                VD3 = 0;
+                VD4 = 0;
+                VD5 = 0;
+                VD6 = 0;
+                VD7 = 0;
+                VD8 = 0;
+                VD9 = 0;
+                VD10 = 0;
+                //se va a la página anterior
+                tabControl1.SelectedIndex = 0;
+                //se quitan las picture boxes
+                pictureBoxVR1.Visible = false;
+                pictureBoxVA1.Visible = false;
+                pictureBoxVV1.Visible = false;
+                pictureBoxVR2.Visible = false;
+                pictureBoxVA2.Visible = false;
+                pictureBoxVV2.Visible = false;
+                pictureBoxVR3.Visible = false;
+                pictureBoxVA3.Visible = false;
+                pictureBoxVV3.Visible = false;
+                pictureBoxVR4.Visible = false;
+                pictureBoxVA4.Visible = false;
+                pictureBoxVV4.Visible = false;
+                pictureBoxVR5.Visible = false;
+                pictureBoxVA5.Visible = false;
+                pictureBoxVV5.Visible = false;
+                pictureBoxVR6.Visible = false;
+                pictureBoxVA6.Visible = false;
+                pictureBoxVV6.Visible = false;
+                pictureBoxVR7.Visible = false;
+                pictureBoxVA7.Visible = false;
+                pictureBoxVV7.Visible = false;
+                pictureBoxVR8.Visible = false;
+                pictureBoxVA8.Visible = false;
+                pictureBoxVV8.Visible = false;
+                pictureBoxVR9.Visible = false;
+                pictureBoxVA9.Visible = false;
+                pictureBoxVV9.Visible = false;
+                pictureBoxVR10.Visible = false;
+                pictureBoxVA10.Visible = false;
+                pictureBoxVV10.Visible = false;
+                //se deshabilitan los botones
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                //se habilitan nuevamente los botones 
+                button8.Enabled = true;
+                textBoxNombre.Enabled = true;
+                textBoxApellido.Enabled = true;
+                textBoxUsuario.Enabled = true;
+                textBox1.Enabled = true;
+            }
         }
 
         public Form1()
@@ -518,6 +3616,7 @@ namespace Proyecto_matemática_discreta_II
             button2.Enabled = false;
             button3.Enabled = true;
             button4.Enabled = true;
+            button9.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
