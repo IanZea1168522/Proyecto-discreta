@@ -21,6 +21,7 @@ namespace Proyecto_matemática_discreta_II
         string apellido1, apellido2;
         int edad1, edad2;
         bool dosP = false;
+        bool facil = false;
         //para saber el valor del grafo
         int currentColor = 0;
         //para el grafo en difícil
@@ -453,6 +454,10 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if(facil == false)
+            {
+                botJuegafacil();
+            }
             if (VF1 != 0 && (VF1 == VF4||VF1 == VF2))
             {
                 MessageBox.Show("Perdiste .__________________.");
@@ -499,6 +504,10 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (facil == false)
+            {
+                botJuegafacil();
+            }
             if (VF2 != 0 && (VF2 == VF4 || VF2 == VF1))
             {
                 MessageBox.Show("Perdiste .__________________.");
@@ -550,6 +559,10 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (facil == false)
+            {
+                botJuegafacil();
+            }
             if (VF4 != 0 && (VF4 == VF2 || VF4 == VF1|| VF4 == 3|| VF4 == VF5))
             {
                 MessageBox.Show("Perdiste .__________________.");
@@ -609,6 +622,10 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (facil == false)
+            {
+                botJuegafacil();
+            }
             if (VF3 != 0 && (VF3 == VF4 || VF3 == VF6))
             {
                 MessageBox.Show("Perdiste .__________________.");
@@ -654,6 +671,10 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (facil == false)
+            {
+                botJuegafacil();
+            }
             if (VF5 != 0 && (VF5 == VF4 || VF5 == VF6))
             {
                 MessageBox.Show("Perdiste .__________________.");
@@ -699,6 +720,10 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (facil == false)
+            {
+                botJuegafacil();
+            }
             if (VF6 != 0 && (VF6 == VF3 || VF6 == VF5))
             {
                 MessageBox.Show("Perdiste .__________________.");
@@ -1173,6 +1198,136 @@ namespace Proyecto_matemática_discreta_II
             textBoxApellido.Enabled = true;
             textBoxUsuario.Enabled = true;
             textBox1.Enabled = true;
+        }
+        void botJuegafacil()
+        {
+            bool faJuego = false;
+            if(VF1 == 0 && faJuego == false)
+            {
+                if(VF4 != 1 && VF2 != 1)
+                {
+                    VF1 = 1;
+                    pbV1R.Visible = true;
+                    faJuego = true;
+                }
+                else if(VF4 != 2 && VF2 != 2)
+                {
+                    VF1 = 2;
+                    pbV1A.Visible = true;
+                    faJuego = true;
+                }
+                else if(VF1 != 3 && VF2 != 3)
+                {
+                    VF1 = 3;
+                    pbV1V.Visible = true;
+                    faJuego = true;
+                }
+            }
+            if(VF2 == 0 && faJuego == false)
+            {
+                if (VF4 != 1 && VF1 != 1)
+                {
+                    VF2 = 1;
+                    pbV2R.Visible = true;
+                    faJuego = true;
+                }
+                else if (VF4 != 2 && VF1 != 2)
+                {
+                    VF2 = 2;
+                    pbV2A.Visible = true;
+                    faJuego = true;
+                }
+                else if (VF1 != 3 && VF1 != 3)
+                {
+                    VF2 = 3;
+                    pbV2V.Visible = true;
+                    faJuego = true;
+                }
+            }
+            if(VF3 == 0 && faJuego == false)
+            {
+                if (VF4 != 1 && VF6 != 1)
+                {
+                    VF3 = 1;
+                    pbV3R.Visible = true;
+                    faJuego = true;
+                }
+                else if (VF4 != 2 && VF6 != 2)
+                {
+                    VF3 = 2;
+                    pbV3A.Visible = true;
+                    faJuego = true;
+                }
+                else if (VF4 != 3 && VF6 != 3)
+                {
+                    VF3 = 3;
+                    pbV3V.Visible = true;
+                    faJuego = true;
+                }
+            }
+            if(VF4 == 0 && faJuego == false)
+            {
+                if (VF2 != 1 && VF1 != 1 && VF5 != 1 && VF3 != 1)
+                {
+                    VF4 = 1;
+                    pbV4R.Visible = true;
+                    faJuego = true;
+                }
+                else if (VF2 != 2 && VF1 != 2 && VF5 != 2 && VF3 != 2)
+                {
+                    VF4 = 2;
+                    pbV4A.Visible = true;
+                    faJuego = true;
+                }
+                else if (VF2 != 3 && VF1 != 3 && VF5 != 3 && VF3 != 3)
+                {
+                    VF4 = 3;
+                    pbV4V.Visible = true;
+                    faJuego = true;
+                }
+            }
+            if(VF5 == 0 && faJuego == false)
+            {
+                if (VF4 != 1 && VF6 != 1)
+                {
+                    VF5 = 1;
+                    pbV5R.Visible = true;
+                    faJuego = true;
+                }
+                else if (VF4 != 2 && VF6 != 2)
+                {
+                    VF5 = 2;
+                    pbV5A.Visible = true;
+                    faJuego = true;
+                }
+                else if (VF4 != 3 && VF6 != 3)
+                {
+                    VF5 = 3;
+                    pbV5V.Visible = true;
+                    faJuego = true;
+                }
+            }
+            if(VF6 == 0 && faJuego == false)
+            {
+                if (VF3 != 1 && VF5 != 1)
+                {
+                    VF6 = 1;
+                    pbV6R.Visible = true;
+                    faJuego = true;
+                }
+                else if (VF3 != 2 && VF5 != 2)
+                {
+                    VF6 = 2;
+                    pbV6A.Visible = true;
+                    faJuego = true;
+                }
+                else if (VF3 != 3 && VF5 != 3)
+                {
+                    VF6 = 3;
+                    pbV6V.Visible = true;
+                    faJuego = true;
+                }
+            }
         }
         void botJuegaDificil()
         {
