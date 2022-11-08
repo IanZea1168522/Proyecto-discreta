@@ -453,6 +453,28 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (VF1 != 0 && (VF1 == VF4||VF1 == VF2))
+            {
+                MessageBox.Show("Perdiste .__________________.");
+                reiniciar();
+            }
+            if(VF2 == 0 && VF2 != VF1 && VF2 != VF4 && VF1 != VF4)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if (VF4 == 0 && VF4 != VF2 && VF4 != VF1 && VF4 != VF3 && VF4 != VF5 && VF3 != VF5)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if (VF1 != 0 && VF2 != 0 && VF3 != 0 && VF4 != 0 && VF5 != 0 && VF6 != 0)
+            {
+                MessageBox.Show("Ha ganado " + usuario2);
+                reiniciar();
+
+            }
+
         }
 
         private void pbV2_Click_1(object sender, EventArgs e)
@@ -477,6 +499,27 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (VF2 != 0 && (VF2 == VF4 || VF2 == VF1))
+            {
+                MessageBox.Show("Perdiste .__________________.");
+                reiniciar();
+            }
+            if (VF4 == 0 && VF4 != VF2 && VF4 != VF1 && VF4 != VF3 && VF4 != VF5 && VF3 != VF5)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if (VF1 == 0 && VF2 != VF1 && VF2 != VF4 && VF1 != VF4)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if (VF1 != 0 && VF2 != 0 && VF3 != 0 && VF4 != 0 && VF5 != 0 && VF6 != 0)
+            {
+                MessageBox.Show("Ha ganado " + usuario2);
+                reiniciar();
+
+            }
         }
 
         private void pbV1V_Click(object sender, EventArgs e)
@@ -490,40 +533,16 @@ namespace Proyecto_matemática_discreta_II
             if (currentColor == 1)
             {
                 pbV4R.Visible = true;
-                VF3 = 1;
-            }
-            else if (currentColor == 2)
-            {
-                pbV4A.Visible = true;
-                VF3 = 2;
-            }
-            else if (currentColor == 3)
-            {
-                pbV4V.Visible = true;
-                VF3 = 3;
-            }
-            else
-            {
-                MessageBox.Show("Selecciona un color");
-            }
-            currentColor = 0;
-        }
-
-        private void pbV3_Click(object sender, EventArgs e)
-        {
-            if (currentColor == 1)
-            {
-                pbV3R.Visible = true;
                 VF4 = 1;
             }
             else if (currentColor == 2)
             {
-                pbV3A.Visible = true;
+                pbV4A.Visible = true;
                 VF4 = 2;
             }
             else if (currentColor == 3)
             {
-                pbV3V.Visible = true;
+                pbV4V.Visible = true;
                 VF4 = 3;
             }
             else
@@ -531,6 +550,86 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (VF4 != 0 && (VF4 == VF2 || VF4 == VF1|| VF4 == 3|| VF4 == VF5))
+            {
+                MessageBox.Show("Perdiste .__________________.");
+                reiniciar();
+            }
+            if (VF2 == 0 && VF2 != VF1 && VF2 != VF4 && VF1 != VF4)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+              
+                reiniciar();
+            }
+            if (VF1 == 0 && VF2 != VF1 && VF2 != VF4 && VF1 != VF4)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if(VF3 == 0 && VF3 != VF4 && VF3 != VF5 && VF3 != VF6)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if(VF5 == 0 && VF5 != VF4 && VF5 != VF6)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if (VF1 != 0 && VF2 != 0 && VF3 != 0 && VF4 != 0 && VF5 != 0 && VF6 != 0)
+            {
+                MessageBox.Show("Ha ganado " + usuario2);
+                reiniciar();
+
+            }
+
+
+
+        }
+
+        private void pbV3_Click(object sender, EventArgs e)
+        {
+            if (currentColor == 1)
+            {
+                pbV3R.Visible = true;
+                VF3 = 1;
+            }
+            else if (currentColor == 2)
+            {
+                pbV3A.Visible = true;
+                VF3 = 2;
+            }
+            else if (currentColor == 3)
+            {
+                pbV3V.Visible = true;
+                VF3 = 3;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un color");
+            }
+            currentColor = 0;
+            if (VF3 != 0 && (VF3 == VF4 || VF3 == VF6))
+            {
+                MessageBox.Show("Perdiste .__________________.");
+                reiniciar();
+            }
+            if(VF4 == 0 && VF4 != VF5 && VF4 != VF3 && VF4 != VF2 && VF4 != VF1 && VF1 != VF2 && VF3 != VF6 && VF5 != VF6)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if(VF6 == 0 && VF6 != VF5 && VF5 != VF4)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if (VF1 != 0 && VF2 != 0 && VF3 != 0 && VF4 != 0 && VF5 != 0 && VF6 != 0)
+            {
+                MessageBox.Show("Ha ganado " + usuario2);
+                reiniciar();
+
+            }
         }
 
         private void pbV5_Click(object sender, EventArgs e)
@@ -555,6 +654,27 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (VF5 != 0 && (VF5 == VF4 || VF5 == VF6))
+            {
+                MessageBox.Show("Perdiste .__________________.");
+                reiniciar();
+            }
+            if (VF4 == 0 && VF4 != VF3  && VF4 != VF2 && VF4 != VF1 && VF1 != VF2 && VF3 != VF6)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if (VF6 == 0 && VF6 != VF3 && VF3 != VF4)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if (VF1 != 0 && VF2 != 0 && VF3 != 0 && VF4 != 0 && VF5 != 0 && VF6 != 0)
+            {
+                MessageBox.Show("Ha ganado " + usuario2);
+                reiniciar();
+
+            }
         }
 
         private void pbV6_Click(object sender, EventArgs e)
@@ -579,6 +699,27 @@ namespace Proyecto_matemática_discreta_II
                 MessageBox.Show("Selecciona un color");
             }
             currentColor = 0;
+            if (VF6 != 0 && (VF6 == VF3 || VF6 == VF5))
+            {
+                MessageBox.Show("Perdiste .__________________.");
+                reiniciar();
+            }
+            if (VF3 == 0 && VF3 != VF4 && VF5 != VF4 && VF4 != VF1 && VF4 != VF2 && VF1 != VF2)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if(VF5 == 0 && VF5 != VF4 && VF4 != VF3 && VF4 != VF1 && VF4 != VF2 && VF2 != VF1)
+            {
+                MessageBox.Show("Ha ganado, felicidades " + usuario1);
+                reiniciar();
+            }
+            if (VF1 != 0 && VF2 != 0 && VF3 != 0 && VF4 != 0 && VF5 != 0 && VF6 != 0)
+            {
+                MessageBox.Show("Ha ganado " + usuario2);
+                reiniciar();
+
+            }
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -960,6 +1101,12 @@ namespace Proyecto_matemática_discreta_II
             VD8 = 0;
             VD9 = 0;
             VD10 = 0;
+            VF1 = 0;
+            VF2 = 0;
+            VF3 = 0;
+            VF4 = 0;
+            VF5 = 0;
+            VF6 = 0;
             //se va a la página anterior
             tabControl1.SelectedIndex = 0;
             //se quitan las picture boxes
@@ -993,10 +1140,31 @@ namespace Proyecto_matemática_discreta_II
             pictureBoxVR10.Visible = false;
             pictureBoxVA10.Visible = false;
             pictureBoxVV10.Visible = false;
+            pbV1A.Visible = false;
+            pbV1R.Visible = false;
+            pbV1V.Visible = false;
+            pbV2A.Visible = false;
+            pbV2R.Visible = false;
+            pbV2V.Visible = false;
+            pbV3A.Visible = false;
+            pbV3R.Visible = false;
+            pbV3V.Visible = false;
+            pbV4A.Visible = false;
+            pbV4R.Visible = false;
+            pbV4V.Visible = false;
+            pbV5A.Visible = false;
+            pbV5R.Visible = false;
+            pbV5V.Visible = false;
+            pbV6A.Visible = false;
+            pbV6R.Visible = false;
+            pbV6V.Visible = false;
             //se deshabilitan los botones
             button5.Enabled = false;
             button6.Enabled = false;
             button7.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button9.Enabled = false;
             button1.Enabled = false;
             button2.Enabled = false;
             //se habilitan nuevamente los botones 
