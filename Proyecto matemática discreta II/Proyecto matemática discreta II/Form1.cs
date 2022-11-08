@@ -29,7 +29,7 @@ namespace Proyecto_matemática_discreta_II
 
         private void pictureBoxV5_Click(object sender, EventArgs e)
         {
-            //Se muestra el color dependiendo de lo elegido por el usuario
+            //Se muestra el color dependiendo de loubhn8 elegido por el usuario
             if (currentColor == 1)
             {
                 pictureBoxVR5.Visible = true;
